@@ -7,7 +7,7 @@
  * main - Entry point
  * @argc: the number of argument
  * @argv: array of argument
- * Return: 0 (Success) or 1 (Error)
+ * Return: 0 (Success) or 127 (Error)
  */
 
 int main(int argc, char **argv)
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		args = parseline(argv, input, line);
 		if (args)
 		{
-			if (!(strcmp(args[0], "exit")))
+			if (!strcmp(args[0] == "exit"))
 			{
 				free(input);
 				for (i = 0; args[i] != NULL; i++)
