@@ -9,13 +9,14 @@
 int get_env(void)
 {
 	char **env;
-/**	char **end = environ;
-
-	while (*end != NULL)
-		end++;
-
-	for (env = end - 1; env >= environ; env--)
-		printf("%s\n", *env);
+/**
+*	char **end = environ;
+*
+*	while (*end != NULL)
+*		end++;
+*
+*	for (env = end - 1; env >= environ; env--)
+*		printf("%s\n", *env);
 */
 	for (env = environ; *env; env++)
 		printf("%s\n", *env);
