@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 		args = parseline(argv, input, line);
 		if (args)
 		{
-			if (!strcmp(args[0] == "exit"))
+			if (!strcmp(args[0], "exit"))
 			{
 				free(input);
 				for (i = 0; args[i] != NULL; i++)
